@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Imagify : Welcome to the world of images!</title>
+  </head>
+  <body>
+    <button id="back-to-top" class="btn btn-success" type="button">
+        <i class="fa fa-angle-up fa-3x"></i>
+    </button>
+    <div class="container">
+      <div class="row justify-content-center theme-search-box">
+        <div class="col col-sm-10 col-md-8 col-lg-6">
+          <div class="input-group">
+            <input
+              id="search-input"
+              type="text"
+              class="form-control theme-search-input"
+              placeholder="Search images"
+            />
+            <div class="input-group-append">
+              <button id="search-button" class="btn btn-success theme-search-button" type="button">
+                <i class="fa fa-search"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="js-image-gallery flex-images">
+    </div>
+    <div id="modal" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="theme-modal-loader js-modal-loader"></div>
+                    <div class="js-modal-image-container"></div>
+                </div>
+                <div class="modal-footer theme-navigation-buttons">
+                    <button type="button" class="js-prev-btn btn btn-success">Prev</button>
+                    <button type="button" class="js-next-btn btn btn-success">Next</button>
+                </div>
+            </div>
+        </div>
+    </div>
+  </body>
+</html>
