@@ -7,7 +7,7 @@ export const renderResults = (imageResults) => {
   const html = imageResults
     .map(
       (result) =>
-        `<div class="item" data-w="${result.webformatWidth}" data-h="${result.webformatHeight}"><img class="theme-grid-image js-grid-image" data-id="${result.id}" data-large-image-url="${result.webformatURL}" src="${result.webformatURL}"></div>`
+        `<div class="item" data-w="${result.webformatWidth}" data-h="${result.webformatHeight}"><img class="theme-grid-image js-grid-image" data-id="${result.id}" data-large-image-url="${result.largeImageURL}" src="${result.webformatURL}"></div>`
     )
     .join("");
   elements.imageGallery.append(html);
