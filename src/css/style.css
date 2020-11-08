@@ -152,3 +152,8 @@ theme-modal-loader {
     -webkit-transform: scale(1, 1);
   }
 }
+
+body.modal-open .theme-image-gallery-container{
+  -webkit-filter: blur(5px) grayscale(50%);
+  filter: blur(5px) grayscale(50%);
+}
