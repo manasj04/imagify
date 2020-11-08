@@ -2,6 +2,9 @@
   margin-top: 20px;
   margin-bottom: 20px;
 }
+.theme-search-text-container{
+  margin-bottom: 20px;
+}
 
 .theme-search-input {
   border-radius: 20px 0 0 20px !important;
@@ -157,3 +160,4 @@ body.modal-open .theme-image-gallery-container{
   -webkit-filter: blur(5px) grayscale(50%);
   filter: blur(5px) grayscale(50%);
 }
+

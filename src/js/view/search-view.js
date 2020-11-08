@@ -21,3 +21,13 @@ export const clearInput = () => {
 export const clearResult = () => {
   elements.imageGallery.empty();
 };
+
+export const setSearchText = (isResultsFound, query) => {
+  let html;
+  if(isResultsFound){
+    html = `Showing images for <em><strong>${query}</strong></em>.`;
+  }else{
+    html = `Sorry, no results for <em><strong>${query}</strong></em>. Try Something else.`;
+  }
+  elements.searchText.html(html)
+};

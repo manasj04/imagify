@@ -14,6 +14,7 @@ export default class Search {
         `https://pixabay.com/api/?key=${config.API_KEY}&q=${this.query}&image_type=photo&per_page=${config.RESULTS_PER_PAGE}&page=${this.pageNo}`
       );
       this.currentResult = res.data.hits;
+      this.totalResults = res.data.totalHits;
       this.totalPageNo = res.data.totalHits / config.RESULTS_PER_PAGE;
       this.results = this.results.concat(this.currentResult);
     } catch (error) {

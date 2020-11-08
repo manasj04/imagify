@@ -9,6 +9,8 @@ export const elements = {
   modalContainer: $("#modal"),
   prevButton: $(".js-prev-btn"),
   nextButton: $(".js-next-btn"),
+  imageLoaderContainer: $(".js-modal-loader"),
+  searchText: $(".js-search-text")
 };
 
 export const renderLoader = (parent) => {
@@ -18,5 +20,7 @@ export const renderLoader = (parent) => {
 
 export const clearLoader = () => {
   const loader = $(".loader");
-  if (loader) loader.remove();
+  if (loader) {
+    loader.remove();
+  }
 };

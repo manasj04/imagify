@@ -17,7 +17,8 @@ import { encodedSearchTerm } from "./helper";
 const state = {};
 
 const controlSearchResults = async (isFirstSearch) => {
-  const query = encodedSearchTerm(searchView.getInput());
+  const originalQuery = searchView.getInput();
+  const query = encodedSearchTerm(originalQuery);
 
   if (!query && isFirstSearch) {
     return;
@@ -33,7 +34,14 @@ const controlSearchResults = async (isFirstSearch) => {
 
   try {
     await state.search.getResults();
-    searchView.renderResults(state.search.currentResult);
+    if (state.search.totalResults > 0) {
+      if (isFirstSearch) {
+        searchView.setSearchText(true, originalQuery);
+      }
+      searchView.renderResults(state.search.currentResult);
+    } else {
+      searchView.setSearchText(false, originalQuery);
+    }
   } catch (error) {
     alert(error);
   }
@@ -42,7 +50,7 @@ const controlSearchResults = async (isFirstSearch) => {
 const controlModalImage = (navigationButton) => {
   let imageUrl;
 
-  renderLoader($(".js-modal-loader"));
+  renderLoader(elements.imageLoaderContainer);
 
   if (!navigationButton) {
     state.selectedImageIndex = state.search.getSelectedImageIndex(
