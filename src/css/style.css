@@ -79,6 +79,7 @@ label:focus,
 
 .modal-body {
   padding: 0 !important;
+  position: relative;
 }
 
 .modal-content {
@@ -87,14 +88,6 @@ label:focus,
 
 .modal-footer {
   border: none !important;
-}
-
-.theme-navigation-buttons {
-  margin: 0 auto;
-}
-
-theme-modal-loader {
-  min-height: 100px;
 }
 
 .loader {
@@ -161,3 +154,30 @@ body.modal-open .theme-image-gallery-container{
   filter: blur(5px) grayscale(50%);
 }
 
+.theme-prev-btn{
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 20px !important;
+  background-color: rgb(52,58,64,0.7) !important;
+  border-color: rgb(52,58,64,0.7) !important;
+}
+
+.theme-next-btn{
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 20px !important;
+  background-color: rgb(52,58,64,0.7) !important;
+  border-color: rgb(52,58,64,0.7) !important;
+}
+
+.theme-next-btn:active,
+.theme-next-btn:focus,
+.theme-prev-btn:active,
+.theme-prev-btn:focus{
+  background-color: rgb(52,58,64,0.7) !important;
+  border-color: rgb(52,58,64,0.7) !important;
+}
