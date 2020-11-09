@@ -4,9 +4,9 @@
   "description": "Image search engine",
   "main": "index.html",
   "scripts": {
-    "dev": "webpack --mode development",
     "build": "webpack --mode production",
-    "start": "webpack-dev-server --mode development --open"
+    "dev": "webpack-dev-server --mode development --open",
+    "start": "node server.js"
   },
   "keywords": [],
   "author": "Manas Jain",
@@ -23,6 +23,7 @@
   "dependencies": {
     "axios": "^0.21.0",
     "bootstrap": "^4.5.3",
+    "express": "^4.17.1",
     "jquery": "^3.5.1",
     "popper.js": "^1.16.1"
   }
