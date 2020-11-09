@@ -4,7 +4,6 @@
   "description": "Image search engine",
   "main": "index.html",
   "scripts": {
-    "build": "webpack --mode production",
     "dev": "webpack-dev-server --mode development --open",
     "start": "node server.js",
     "heroku-postbuild": "webpack -p"
