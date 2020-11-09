@@ -2,7 +2,6 @@
   "name": "imagify",
   "version": "1.0.0",
   "description": "Image search engine",
-  "main": "index.html",
   "scripts": {
     "dev": "webpack-dev-server --mode development --open",
     "start": "node server.js",
